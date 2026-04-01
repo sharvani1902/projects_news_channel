@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Live News</title>
+    <style>
+        body { font-family: Arial; text-align: center; }
+        table { margin: auto; border-collapse: collapse; width: 70%; }
+        th, td { border: 1px solid black; padding: 10px; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+
+<h2>📺 Live News Channels</h2>
+
+<table>
+    <tr>
+        <th>Channel</th>
+        <th>Now Playing</th>
+    </tr>
+
+    {% for item in news %}
+    <tr>
+        <td>{{ item.channel }}</td>
+        <td>{{ item.title }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>
